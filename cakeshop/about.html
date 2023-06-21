@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        h2{
+            text-align: center;      
+            font-family: 'Cormorant';
+            font-style: italic;
+            width: 40%;
+            background:silver;
+            color:maroon;
+            font-size: xx-large;
+            bottom: 340px;
+           right: 200px;
+          padding: 20px;
+ 
+        }
+         h1{
+text-align: center;      
+  background: rgb(174, 217, 222);
+  background: rgba(176, 200, 194, 0.5);
+  color:#bd924d;
+  font-family: 'Cormorant';
+  width: 60%;
+  font-style: italic;
+  padding: 10px;
+ 
+        }
+        button{
+            background-color: silver;
+border-color:lightgrey;
+color:maroon;
+bottom:200px;
+right:300px;
+font-size: xx-large;
+font-family: cormorant;
+padding:5px;
+
+        }
+h4{
+color:pink;
+font-size:xx-larger;
+font-family:cormorant;
+}
+        img{
+           
+            float:right;
+            margin-right:30px;
+        }
+        #dialog
+        {
+         padding-top: 150px;
+         font-size: 30px;  
+        }      
+        #a1
+        {
+            padding-top: 300px;
+        }
+        h2{
+            position: absolute;
+        }
+        h5{
+           
+  color:#bd924d;
+  font-family: 'Cormorant';
+  width: 100%;
+  font-style: italic;  
+  font-size: larger;
+        }
+        .testimony_box h1 {
+  padding: 0px 0px 100px 0px;
+}
+
+.testimony_item{
+    background: rgb(174, 217, 222);
+  background: rgba(176, 200, 194, 0.5);
+padding:13px ;
+border: 3px solid pink;
+border-top-right-radius: 50px;
+border-bottom-left-radius: 50px;
+margin: 30px;
+}
+
+.col-sm-8{
+padding:0;
+}
+
+a{
+  background-color: rgba(34, 138, 112, 0.5);
+border-color:lightgrey;
+color:white;
+bottom:50px;
+right:300px;
+font-size: xx-large;
+font-family: calibri;
+
+padding:5px;
+}
+p{ font:bold;
+    font-size: x-large;
+    font-family: 'cormorant';
+    font-style: italic;
+    color: rgb(25, 49, 61);
+}
+body{
+ 
+ display:block;
+ 
+ 
+
+}
+.card{
+ border-style:solid;
+ width:400px;
+ height:500px;
+ margin:auto;
+ border:solid grey;
+ border-radius:20px;
+ background-color:white;
+}
+.product-title{
+
+ /*This text shadow format is per as google fonts requirements*/
+display:flex;
+justify-content:center;
+ align-items:center;
+ font-family: 'Tangerine', serif;
+}
+.product-price{
+
+text-align:center;
+
+ border-style:5px solid;
+ font-size:10px;
+ border-radius:10px;
+  /*minimal height for the button*/
+ min-height:50px;
+}
+
+.card-img{
+  /*here the image will take the maximum width of the card*/
+ max-width:400px;
+ align-items:center;
+ height:90px;
+ border-radius:3px;
+ 
+}
+.info{
+  /*the product information section is displayed as a block of words*/
+ display:block;
+ text-align:center;
+}
+.contacts{
+ background-color:white;
+ padding:4px;
+ 
+}
+.email{
+  /*automatically resizes a box*/
+ box-sizing:100px;
+ border:solid;
+ font-size:20px;
+ border-radius:5px;
+}
+.tel-no{
+ box-sizing:box-border;
+ border:solid;
+ font-size:30px;
+  /*content is positioned towards the right side of the contact section*/
+ float:right;
+ border-radius:5px;
+ 
+ 
+}
+a {
+ color:black;
+  font-size:1.5rem;
+ text-align:center;
+}
+
+.checked {
+  color: orange;
+}
+h6{
+font-size:xx-large;
+font-family: cormorant;
+color:maroon;
+
+    </style>
+    <script>
+        $(document).ready(function() {  
+            $('#i1').click(function() {  
+               $( '#c1' ).effect({  
+                  effect: "slide",  
+                 duration: 1500  
+               });  
+            });
+$("#b2").click(function(){
+$.get("aboutus.php",function(data,status,xhr)
+{
+alert("Display Cake themes");
+$("#b2").html(data);
+});});
+$(".card").click(function(){
+$.ajaxSetup({url: "thank.php", success: function(result){
+$(".card").html(result);}});
+$.ajax();
+});
+
+
+            $('#i1').click(function() {  
+               $( "#i1" ).effect({  
+                  effect: "explode",  
+                   
+                  pieces: 30,  
+                  duration: 1800  
+               });  
+            });  
+
+            $('#c1').click(function() {  
+               $( "#c1" ).effect({  
+                  effect: "puff",  
+                duration: 500  
+               });  
+            });  
+
+$('#b1').click(function() {  
+               $( "#s" ).effect({  
+                  effect: "blind",  
+                 duration:0  
+              });  
+            });  
+           
+$( "#i1" ).click(function() {
+  $( "#c3" ).toggle( "hide" );
+});
+$('#b2').click(function() {  
+               $( "#effect" ).effect({  
+                  effect: "highlight",  
+                duration: 1800  
+               });  
+            });  
+$('#i2').click(function() {  
+               $( "#i2" ).effect( "bounce", {  
+                  times: 5,  
+                  distance: 300  
+               })
+        });
+            $( function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "fold",
+        duration: 1000
+      }
+    });
+ 
+    $( "#i2" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  } );
+  $( function() {
+    $( document ).tooltip();
+  } );
+
+});
+         
+    </script>
+</head>
+<body>
+    <img id="i1" src="https://img.freepik.com/free-photo/front-view-chocolate-cake-concept_23-2148769276.jpg"width="100%"height="900px">
+    <h2 id="c3">Delicious ...
+    cakes for You<br>It's always good time for sweets'.made with care and prepared .our sweets are all you might need to make every day special.</h2>
+    <h1 id="c1">I hope you have some great memories of homemade baked goods,<br> where the scent of fresh-baked chocolates and cakes came from a kitchen with people who loved and cared about you.<br>
+        This is where homemade becomes a beautiful description of a place in time that we felt loved, or even safe. <br>
+       I hope that you feel that way with every order you receive from us.</h1>
+       <img id="i2" src="https://img.freepik.com/free-photo/front-view-sweet-chocolate-cake_23-2148834059.jpg?size=626&ext=jpg&ga=GA1.2.1771623641.1675006700&semt=sph" width="600px"height="400px">
+       <button id="b1">Shop Now</button> <br><br>
+       
+    <div id="s">
+        <h1>TYPES OF CAKES</h1>  
+    <img id="image" src="https://cdn.igp.com/f_auto,q_auto,t_pnopt8prodlp/products/p-delicious-choco-creamy-cake-600-gm--190843-m.jpg"width="250px"height="300px">
+    <img src="https://cdn.igp.com/f_auto,q_auto,t_pnopt8prodlp/products/p-stars-chocolate-cake-half-kg--4784-m.jpg"width="250px"height="300px">
+    <img src="https://www.cakebuzz.co.in/wp-content/uploads/2021/12/Photo-Reel-Cake-2-300x300.jpeg"width="250px"height="300px">
+   
+</div><br>
+
+    <div id="dialog" title="join us">
+        <h4>Follow us for latest updates, give your feedback on social media</h4>
+        <i style="font-size:50px" class="fa">&#xf16d</i>
+        <i style="font-size:50px" class="fa">&#xf099;</i>
+        <i style="font-size:50px" class="fa">&#xf09a;</i>
+    </div><br><br>
+   
+    <div id="a1">
+    <h5>Let's see what our customers say about us</h5></div>
+    <div class="container">
+        <div class="row">
+            <div id="effect"class="testimony_box text-justify">
+           
+                <div class="testimony_item col-sm-5">
+                    <div class="col-sm-9">
+                        <p>
+                            "Just a quick note to say thank you so much for the beautiful Birthday Cake, they looked amazing and tasted even better!! The raspberry cupcakes were delicious.
+                        </p>
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-7">
+                            <h3>John Snow</h3>
+                    </div>
+                    </div>
+                    <div class="testimony_item col-sm-5">
+                        <div class="col-sm-9">
+                            <p>
+                                "Such a beautiful cake... Thank you, you are so talented. It was really chocolaty just like I like it and everyone else at the party enjoyed it too. It went a long way… to my delight!"
+                             </p>
+                        </div>
+                        <div class="col-sm-5 col-sm-offset-7">
+                            <h3>charlie</h3>
+                    </div>
+
+
+                </div>
+                <center>  <button id="b2">THEMES</button></center><br><br>
+<center><h6>EXPLORE MORE................</h6></center>
+                <section class="card">
+                 
+                    <center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSksD74UppKTMUYYvhDQamJJYFECcRjkR2QdPmqJ38Gi7ME5a-bnODXRy3DVXGw8lR_lF8&usqp=CAU" alt="Yummix cup cake"  class="card-img"></center>
+                    </a>
+                  <!--product and button are begins here-->
+                  <div class="product-title">
+                   
+                   <p> CAKES OF PARADISE </p>
+                      </a>
+                   
+                    <!-- used the <br> tag so that the product title and product line are in the same container with little white space-->
+                 
+                  </div>
+                  <!--product annd button are ends here--->
+                  <!--information section begins here-->
+                <article class="info">
+                  <p>Ideal for any occasion, flavor and quantity as per customer's request.<br\>
+                  <p>No frosting</p>
+                <h5 id="r"><i style='font-size:24px' class='fas'>&#xf87b;</i> 9347834534<br>
+                  <i style="font-size:24px" class="fa">&#xf0e0;</i>cakesofparadise@gmail.com</h5>
+                  <article>
+                    <!--product information ends here-->
+                    <!--footer section-->
+                <footer class="contacts">
+                 <p id="r1">RATINGS</p>
+                <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+                </footer>
+          <p>HOME MADE CAKES</p>
+                </section>
+
+<center><a href="home.html"><button>Back to home</button></a></center>
+                              
+</body>
+</html>

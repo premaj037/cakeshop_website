@@ -1,0 +1,639 @@
+<html>
+
+<head>
+    <link href=
+'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-darkness/jquery-ui.css'
+        rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src= "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+       
+      
+      
+    <style>
+        b{
+            float: right;
+            margin: 7px;
+            color: lime;
+        }
+        
+        #geeks a:hover{
+            color: lime;
+            background: gray;
+        }
+        p{
+            text-align: center;
+            
+        }
+        img{
+            float: right;
+           
+        }
+        .ui-menu { width: 150px; }
+        .checked {
+  color: orange;
+}
+h2{
+  font-family: cursive;
+}
+    h2{
+      color: khaki;
+    }    
+h1{
+  font-family: 'Times New Roman', Times, serif;
+  color: bisque;
+}
+    </style>
+        
+            <script>
+                $(document).ready(function() {
+
+                  $('#img1').click(function() {
+$( "#img1" ).effect({
+effect: "blind",
+duration:0
+});
+});
+              
+$('#img2').click(function() {
+$( "#img2" ).effect({
+  effect:"shake",
+times: 5,
+});
+});     
+
+
+$('#img3').click(function() {
+$( "#img3" ).effect({
+  effect:"bounce",
+times: 5,
+distance: 300
+});
+});
+
+
+$('#img4').click(function() {
+$( "#img4" ).effect({
+effect: "explode",
+easing: "easeInExpo",
+pieces: 20,
+duration: 1800
+});
+});
+
+
+$('#img5').click(function() {
+$( "#img5" ).effect({
+effect: "clip",
+duration: 1800
+});
+});
+
+
+$('#img6').click(function() {
+$( "#img6" ).effect({
+effect: "drop",
+});
+});
+
+$('#img7').click(function() {
+$( "#img7" ).effect({
+effect: "fade",
+});
+});
+
+$('#img8').click(function() {
+$( "#img8" ).effect({
+effect: "fold",
+duration: 4000
+});
+});
+
+$("h1").click(function() {
+$( "h1" ).effect({
+effect: "highlight",
+duration: 3000
+});
+});
+
+
+$('#img9').click(function() {
+$( "#img9" ).effect({
+effect: "puff",
+duration: 4000
+});
+});
+
+
+$('#img10').click(function() {
+$( "#img10" ).effect({
+effect: "pulsate",
+duration: 6000
+});
+});
+
+
+$('#img11').click(function() {
+$( "#img11" ).effect({
+effect: "slide",
+duration: 1500
+});
+});
+
+                    $("#m1").tabs({
+                            active: 0,heightStyle:'fill'
+                        });
+                
+               
+                $(function() {  
+    $( "#m" ).draggable();  
+  });  
+                  
+
+                $( function() {
+                $( "#menu" ).menu();
+                } );
+                $( function() {
+                $( "#menu1" ).menu();
+                } );
+                $( function() {
+                $( "#menu2" ).menu();
+                } );
+                $( function() {
+                $( "#menu3" ).menu();
+                } );
+
+                $("#rateYo").rateYo({
+            rating: 1.5,
+            spacing: "10px",
+            numStars: 5,
+            minValue: 0,
+            maxValue: 5,
+            normalFill: 'black',
+            ratedFill: 'orange',
+  
+        });
+
+});
+ </script>
+ </head>
+        
+<body>
+    <br>
+    <br>
+    <div id="m1">
+        <ul>
+
+            <li><a href="#s1">TRIPPUR</a></li>
+            <li><a href="#s2">COIMBATORE</a></li>
+            <li><a href="#s3">ERODE</a></li>
+            <li><a href="#s4">GOBI</a></li>
+        </ul>
+        <div id='s1'>
+          <center><h1>THE CAKE PARADISE</h1></center><br><br>
+            <img src="https://images.unsplash.com/photo-1595144780677-6d0b5abbd089?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FrZSUyMHNob3B8ZW58MHx8MHx8&w=1000&q=80" width="700px" id="m">
+            
+            <h2>Address</h2>
+            <p>360, 392, Avinashi - Tiruppur Rd,
+               KNP Puram, Odakkadu, 
+               Tiruppur, Tamil Nadu 641687</p><br>
+               <h2>Star Rating(4.0)</h2>
+               <span class="fa fa-star checked"></span>
+               <span class="fa fa-star checked"></span>
+               <span class="fa fa-star checked"></span>
+               <span class="fa fa-star checked"></span>
+               <span class="fa fa-star"></span>
+            <h2>Open hours</h2>
+            <ul id="menu">                            
+                <li><div>Timing</div></li>
+                <li><div>Open and close</div>
+                  <ul>
+                    <li><div>Monday</div>
+                      <ul>
+                        <li><div>8am to 10pm</div></li>
+                      </ul>
+                    </li>
+                    <li><div>Tuesday</div>
+                      <ul>
+                        <li><div>8am to 10pm</div></li>
+                      </ul>
+                    </li>
+                    <li><div>Wednesday</div>
+                        <ul>
+                          <li><div>8am to 10pm</div></li>
+                        </ul>
+                      </li>
+                      <li><div>Thursday</div>
+                        <ul>
+                          <li><div>8am to 10pm</div></li>
+                        </ul>
+                      </li>
+                      <li><div>Friday</div>
+                        <ul>
+                          <li><div>8am to 10pm</div></li>
+                        </ul>
+                      </li>
+                      <li><div>Saturday</div>
+                        <ul>
+                          <li><div>8am to 10pm</div></li>
+                        </ul>
+                      </li>
+                      <li><div>Sunday</div>
+                        <ul>
+                          <li><div>8am to 10pm</div></li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                </ul> 
+                <h2>Phone NO</h2>
+                0421 224 2789   
+               
+               
+                  <h2>Location</h2>
+                  <li>
+                  
+                    <a href="https://www.google.com/maps/dir//360,+392,+Avinashi+-+Tiruppur+Rd,+KNP+Puram,+Odakkadu,+Tiruppur,+Tamil+Nadu+641687/@11.1105373,77.2684158,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba907aed680f81d:0xced9132b3245cc2e!2m2!1d77.338446!2d11.1105453">TRIPPUR</a>
+                </li>
+                <br><br>
+               <center> <h1>SPECIAL CAKES AVAILABLE!!!</h1></center><br><br><br>
+                <div  class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                          <img id="img1" src="https://cdn.shopify.com/s/files/1/1060/3816/products/choco-delight-fruit_2830127f-4446-4813-b399-dc53b4344e5f_360x.progressive.jpg?v=1594973980" alt="Lights" style="width:100%">
+                          <div class="caption">
+                            <p>Choco Delight Fruit</p>
+                            
+                           </div>
+                         
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                          <img id="img2"  src="https://cdn.shopify.com/s/files/1/1060/3816/products/kit-kat-gems-truffle-premium_360x.progressive.jpg?v=1643338744" alt="Nature" style="width:100%">
+                          <div class="caption">
+
+                          <p>Kit Kat Gems Truffle Premium</p>
+                          </div>
+                      </div>
+                    </div>
+
+
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                          <img id="img3"src="https://cdn.shopify.com/s/files/1/1060/3816/products/Attractive-Yellowish-Rasmalai-Cake_900x.jpg?v=1623905418" alt="Nature" style="width:100%">
+                          <div class="caption">
+
+                          <p>Attractive Yellowish Rasmalai Cake
+                          </p>
+                          </div>
+                      </div>
+                    </div>
+                    <center><a href="home.html"><button>Back to home</button></a></center>
+       </div>
+               
+  </div>              
+            </div>
+
+      <div id='s2'>
+       <center> <h1>THE CAKE PARADISE</h1></center><br><br>
+        <img  src="https://content3.jdmagicbox.com/comp/chennai/i6/044pxx44.xx44.200315192554.c1i6/catalogue/kekiz-the-cake-shop-padi-chennai-cake-shops-t5ldu03iq9.jpg" width="700px">
+        
+        <h2>Address</h2>
+        <p>69, E Lokamanya St, Sukrawar Pettai, R.S. Puram, Coimbatore, Tamil Nadu 641002
+        </p><br>
+        <h2>Star Rating(4.0)</h2>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <h2>Open hours</h2>
+        <ul id="menu1">                            
+          <li><div>Timing</div></li>
+          <li><div>Open and close</div>
+            <ul>
+              <li><div>Monday</div>
+                <ul>
+                  <li><div>8am to 10pm</div></li>
+                </ul>
+              </li>
+              <li><div>Tuesday</div>
+                <ul>
+                  <li><div>8am to 10pm</div></li>
+                </ul>
+              </li>
+              <li><div>Wednesday</div>
+                  <ul>
+                    <li><div>8am to 10pm</div></li>
+                  </ul>
+                </li>
+                <li><div>Thursday</div>
+                  <ul>
+                    <li><div>8am to 10pm</div></li>
+                  </ul>
+                </li>
+                <li><div>Friday</div>
+                  <ul>
+                    <li><div>8am to 10pm</div></li>
+                  </ul>
+                </li>
+                <li><div>Saturday</div>
+                  <ul>
+                    <li><div>8am to 10pm</div></li>
+                  </ul>
+                </li>
+                <li><div>Sunday</div>
+                  <ul>
+                    <li><div>8am to 10pm</div></li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          </ul> 
+  <h2>Phone NO</h2>
+            098430 65567   
+            <h2>Location</h2>
+            <li>
+            <a href="https://www.google.com/maps/dir//360,+392,+Avinashi+-+Tiruppur+Rd,+KNP+Puram,+Odakkadu,+Tiruppur,+Tamil+Nadu+641687/@11.1105373,77.2684158,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba907aed680f81d:0xced9132b3245cc2e!2m2!1d77.338446!2d11.1105453">CIOMBATORE</a>
+          </li>  
+<br>
+         <center> <h1>SPECIAL CAKES AVAILABLE!!!</h1></center><br><br><br>
+
+   
+
+          <div  class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="img4" src="https://cdn.shopify.com/s/files/1/1060/3816/products/3163_360x.progressive.jpg?v=1622387770" alt="Lights" style="width:100%">
+                    <div class="caption">
+                      <p>Look Like Barbie Doll Theme Cake
+                      </p>
+                    </div>
+                   
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="img5" src="https://cdn.shopify.com/s/files/1/1060/3816/products/dark-chocolate-swirl-cake_900x.jpg?v=1594974375" alt="Nature" style="width:100%">
+                    <div class="caption">
+
+                    <p>Dark Chocolate Swirl Cake</p>
+                    </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="img6" src="https://cdn.shopify.com/s/files/1/1060/3816/products/delicious-irish-coffee-cake_74e8c8ac-cb1d-4983-9b43-a048efadce24_360x.progressive.jpg?v=1594973869" alt="Nature" style="width:100%">
+                    <div class="caption">
+
+                    <p>Delicious Irish Coffee Cake
+                    </p>
+                    </div>
+                </div>
+              </div>
+              <center><a href="home.html"><button>Back to home</button></a></center>
+ </div>
+         
+</div>   
+          
+          
+        
+
+    </div>
+
+    <div id='s3'>
+      <center> <h1>THE CAKE PARADISE</h1></center><br><br>
+
+      <img src="https://img.freepik.com/premium-photo/pastry-shop-glass-display-with-selection-cakes_109285-5232.jpg" width="700px">
+      
+      <h2>Address</h2>
+      <p>70, Nethaji Rd, Manikundu, Erode Fort, Erode, Tamil Nadu 638001</p>
+     <br>
+      <h2>Star Rating(5.0)</h2>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <h2>Open hours</h2>
+      <ul id="menu2">                            
+          <li><div>Timing</div></li>
+          <li><div>Open and close</div>
+            <ul>
+              <li><div>Monday</div>
+                <ul>
+                  <li><div>6am to 9.30pm</div></li>
+                </ul>
+              </li>
+              <li><div>Tuesday</div>
+                <ul>
+                  <li><div>6am to 9.30pm</div></li>
+                </ul>
+              </li>
+              <li><div>Wednesday</div>
+                  <ul>
+                    <li><div>6am to 9.30pm</div></li>
+                  </ul>
+                </li>
+                <li><div>Thursday</div>
+                  <ul>
+                    <li><div>6am to 9.30pm</div></li>
+                  </ul>
+                </li>
+                <li><div>Friday</div>
+                  <ul>
+                    <li><div>6am to 9.30pm</div></li>
+                  </ul>
+                </li>
+                <li><div>Saturday</div>
+                  <ul>
+                    <li><div>6am to 9.30pm</div></li>
+                  </ul>
+                </li>
+                <li><div>Sunday</div>
+                  <ul>
+                    <li><div>6am to 9.30pm</div></li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          </ul> 
+          <h2>Phone NO</h2>
+          0421 224 2789 
+          <h2>Location</h2>
+          <li>
+          <a href="https://www.google.com/maps/dir//360,+392,+Avinashi+-+Tiruppur+Rd,+KNP+Puram,+Odakkadu,+Tiruppur,+Tamil+Nadu+641687/@11.1105373,77.2684158,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba907aed680f81d:0xced9132b3245cc2e!2m2!1d77.338446!2d11.1105453">ERODE</a>
+        </li>   
+        
+        <center><h1>SPECIAL CAKES AVAILABLE!!!</h1></center><br><br><br>
+
+   
+
+        <div  class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="thumbnail">
+                  <img id="img7" src="https://cdn.shopify.com/s/files/1/1060/3816/products/ultimate-kiwi-punch_dff9bff4-55a1-4429-8b82-4aa4de04cb92_360x.progressive.jpg?v=1594974026" alt="Lights" style="width:100%">
+                  <div class="caption">
+                    <p>Ultimate Kiwi Punch
+
+                    </p>
+                  </div>
+                 
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                  <img id="img8" src="https://cdn.shopify.com/s/files/1/1060/3816/products/love-velvet-treat_7ba4804a-c9be-49a3-89aa-9b49be602c3c_360x.progressive.jpg?v=1594974124" alt="Nature" style="width:100%">
+                  <div class="caption">
+
+                  <p>Love Velvet Treat</p>
+                  </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4">
+              <div class="thumbnail">
+                  <img id="img9" src="https://cdn.shopify.com/s/files/1/1060/3816/products/fgku_360x.progressive.jpg?v=1622387581" alt="Nature" style="width:100%">
+                  <div class="caption">
+
+                  <p>Super Delicious Unicorn Theme Cake
+
+                  </p>
+                  </div>
+              </div>
+            </div>
+            <center><a href="home.html"><button>Back to home</button></a></center>
+</div>
+       
+</div>   
+
+  
+
+  </div>
+
+  <div id='s4'>
+   <center> <h1>THE CAKE PARADISE</h1></center><br><br>
+    <img src="https://media.istockphoto.com/id/526259891/photo/cake-display.jpg?s=612x612&w=0&k=20&c=-o0yToBC-ikohpFQu-gBCKS3KD51bjk6RDBj32jfMsg=" width="800px">
+    
+    <h2>Address</h2>
+    <p>V P Main Rd, Ram Nagar, Gobichettipalayam, Tamil Nadu 638452</p>
+    <br>
+    <h2>Star Rating(3.0)</h2>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <h2>Open hours</h2>
+
+    <ul id="menu3">                            
+        <li><div>Timing</div></li>
+        <li><div>Open and close</div>
+          <ul>
+            <li><div>Monday</div>
+              <ul>
+                <li><div>8am to 10pm</div></li>
+              </ul>
+            </li>
+            <li><div>Tuesday</div>
+              <ul>
+                <li><div>8am to 10pm</div></li>
+              </ul>
+            </li>
+            <li><div>Wednesday</div>
+                <ul>
+                  <li><div>8am to 10pm</div></li>
+                </ul>
+              </li>
+              <li><div>Thursday</div>
+                <ul>
+                  <li><div>8am to 10pm</div></li>
+                </ul>
+              </li>
+              <li><div>Friday</div>
+                <ul>
+                  <li><div>8am to 10pm</div></li>
+                </ul>
+              </li>
+              <li><div>Saturday</div>
+                <ul>
+                  <li><div>8am to 10pm</div></li>
+                </ul>
+              </li>
+              <li><div>Sunday</div>
+                <ul>
+                  <li><div>8am to 10pm</div></li>
+                </ul>
+              </li>
+          </ul>
+        </li>
+        </ul> 
+        <h2>Phone NO</h2>
+        04285 222 255  
+            
+        <h2>Location</h2><br><br>
+        <li>
+        <a href="https://www.google.com/maps/dir//360,+392,+Avinashi+-+Tiruppur+Rd,+KNP+Puram,+Odakkadu,+Tiruppur,+Tamil+Nadu+641687/@11.1105373,77.2684158,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba907aed680f81d:0xced9132b3245cc2e!2m2!1d77.338446!2d11.1105453">GOBI</a>
+      </li>   
+        
+
+      <center><h1>SPECIAL CAKES AVAILABLE!!!</h1></center><br><br><br>
+
+   
+
+      <div  class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+                <img id="img10" src="https://cdn.shopify.com/s/files/1/1060/3816/products/1519804240Womens-Designer-Cake_1-600x600_360x.progressive.jpg?v=1622387502" alt="Lights" style="width:100%">
+                <div class="caption">
+                  <p>Makeup Lover Theme Cake
+
+                  </p>
+                </div>
+               
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+                <img id="img11" src="https://cdn.shopify.com/s/files/1/1060/3816/products/Super-Dainty-Golden-Pinata-Cake_360x.progressive.jpg?v=1623905325" alt="Nature" style="width:100%">
+                <div class="caption">
+
+                <p>Super Dainty Golden Pinata Cake</p>
+                </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4">
+            <div class="thumbnail">
+                <img src="https://cdn.shopify.com/s/files/1/1060/3816/products/fusion-butterscotch_1fce3878-a109-4e44-8491-b3e4ec699e37_360x.progressive.jpg?v=1594974185" alt="Nature" style="width:100%">
+                <div class="caption">
+
+                <p>Fusion Butterscotch
+                </p>
+                </div>
+            </div>
+          </div>
+          <center><a href="home.html"><button>Back to home</button></a></center>
+</div>
+     
+</div>   
+</div>
+
+    </div>
+    
+</body>
+
+</html>

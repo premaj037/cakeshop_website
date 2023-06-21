@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+body{
+  background: url('http://all4desktop.com/data_images/original/4236532-background-images.jpg');
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #262626;
+  margin: 5% 0;
+}
+.container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 1200px)
+{
+  .container{
+    max-width: 1140px;
+  }
+}
+.d-flex{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  border-radius: 0 0 5px 5px;
+  padding: 25px;
+}
+form{
+  flex: 4;
+}
+.Yorder{
+  flex: 2;
+}
+.title{
+  background:#cc1d74;
+ 
+  border-radius:5px 5px 0 0 ;
+  padding: 20px;
+  color: #f6f6f6;
+}
+h2{
+  margin: 0;
+  padding-left: 15px;
+ 
+}
+.required{
+  color: red;
+}
+label, table{
+  display: block;
+  margin: 15px;
+}
+label>span{
+  float: left;
+  width: 25%;
+  margin-top: 12px;
+  padding-right: 10px;
+}
+input[type="text"], input[type="tel"], input[type="email"], input[type="date"], select
+{
+  width: 70%;
+  height: 30px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dadada;
+ 
+
+  font-size: larger;
+}
+select{
+  width: 72%;
+  height: 45px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.Yorder{
+  margin-top: 15px;
+  height: 490px;
+  padding: 20px;
+  border: 1px solid #dadada;
+}
+table{
+  margin: 0;
+  padding: 0;
+}
+th{
+  border-bottom: 1px solid #dadada;
+  padding: 10px 0;
+}
+tr>td:nth-child(1){
+  text-align: left;
+  color: #2d2d2a;
+}
+tr>td:nth-child(2){
+  text-align: right;
+  color: #52ad9cf1;
+}
+td{
+  border-bottom: 1px solid #dadada;
+  padding: 25px 25px 25px 0;
+}
+
+p{
+  display: block;
+  color: #888;
+  margin: 0;
+  padding-left: 25px;
+}
+.Yorder>div{
+  padding: 15px 0;
+}
+
+button{
+  width: 40%;
+  margin-top: 20px;
+  padding: 10px;
+  border: #0c3330df;
+  border-radius: 30px;
+  background: #cc1d74;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+button:hover{
+  cursor: pointer;
+  background: #05a7e2e1;
+}
+ </style>
+
+<script>
+               
+            $(document).ready(function(){
+        $("form").on("submit", function(event){
+            event.preventDefault();
+            var formValues= $(this).serialize();
+            $.post("info1.php", formValues, function(data){
+                $("#h1").html(data);
+            });
+        });
+    });
+</script>
+</head>
+<body>
+<div id="h1">
+    <div class="container">
+        <div class="title">
+            <h2>Product Order Form</h2>
+        </div>
+      <div class="d-flex">
+        <form action="" method="">
+          <label>
+            <span class="fname">First Name <span class="required">*</span></span>
+            <input type="text" name="fname">
+          </label>
+          <label>
+            <span class="lname">Last Name <span class="required">*</span></span>
+            <input type="text" name="lname">
+          </label>
+         
+          <label>
+            <span>Address <span class="required">*</span></span>
+            <input type="text" name="houseadd" placeholder="" required>
+          </label>
+         
+          <label>
+            <span>Phone <span class="required">*</span></span>
+            <input type="tel" name="pho1">
+          </label>
+          <label>
+            <span>Email Address <span class="required">*</span></span>
+            <input type="email" name="city">
+          </label>
+          <label>
+           <span>Cake Name<span class="required" >*</span></span><select name=select>
+            <option></option>    
+            <option>Apple Cake</option>
+                <option>Battenberg Cake</option>
+                <option>Brownie Cake</option>
+                <option>Carrot Cake</option>
+                <option>Black Forest Cake</option>
+                <option>Charlotte Cake</option>
+                <option>Cheese cake</option>
+                <option>Chocolate Cake</option>
+                <option>Chocolava Cake</option>
+                <option>Coconut Cake</option>
+                <option>Coffee Cake</option>
+            </select>
+          </label>
+          <label>
+            <span>Quantity <span class="required">*</span></span>
+            <input type="text" name="houseadd1" placeholder="In Kg" required>
+          </label>
+          <label>
+            <span>Delivery Date<span class="required">*</span></span>
+            <input type="date" name="houseadd2" placeholder="dd-mm-yyyy" required>
+          </label>
+         
+          <center><button>Place Order</button></center>
+        </form>
+        <div class="Yorder">
+         
+          <img src="https://www.bakingo.com/blog/wp-content/uploads/2020/06/fruit-cake.jpg"width="375"height="500">
+          </div>
+</div>
+         
+</body>
+</html>

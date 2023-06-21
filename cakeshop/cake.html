@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://code.jquery.com/ui/1.10.4/themes/ui-darkness/jquery-ui.css" rel="stylesheet">  
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<style>
+.card {
+  box-shadow: 0 8px 10px 0 rgba(240, 237, 237, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  border: 4px white;
+}
+.column {
+  float: left;
+  width: 30%;
+  padding: 20px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+h2{
+font-size: 20px;
+color:rgb(74, 74, 177);
+font-family:cursive;
+}
+h3{
+    font-size: 15px;
+    color:orangered;
+    font-family:Georgia;
+}
+h1{
+  color:white
+}
+</style>
+</head>
+<body bgcolor="black">
+  <center><h1>Cakes Of Paradise</h1></center></div>
+  <div id="progressbar"></div>
+  <div class="row">
+    <div class="column">
+<div class="card" id="b3">
+  <img src="c1.jpg" style="width:100%">
+  <h2>Batternberg cake</h2>
+  <h3>Battenburg is a light sponge cake held together with jam. Mostly has two-by-two check pattern inside!</h3>
+</div>
+</div>
+<div class="column">
+<div class="card" id="b4">
+    <img src="c2.jpg" style="width:100%">
+    <h2>Black Forest Cake</h2>
+    <h3>The black forest cake is originated in Germany and usually made using chocolate,whipped cream,cherries.</h3>
+  </div>
+</div>
+<div class="column">
+    <div class="card" id="b5">
+        <img src="c3.jpg" style="width:100%">
+        <h2>Brownie Cake</h2>
+        <h3>Brownie cake is a bigger version of chocolate brownies.It contains nuts and chocolate chips.</h3>
+      </div>
+    </div>
+</div>
+<div class="row">
+    <div class="column">
+<div class="card" id="b6">
+  <img src="c4.jpg" style="width:100%">
+  <h2>Charlotte Cake</h2>
+  <h3>A charlotte is a type of dessert that can be served hot or cold.It looks like covering a cake with long snacks.</h3>
+</div>
+</div>
+<div class="column">
+<div class="card" id="b7">
+    <img src="c5.jpg" style="width:100%">
+    <h2>Chocolate Cake</h2>
+    <h3>Chocolate cake is the most popular Cake around the world.It is loved by the entire globe.</h3>
+</div>
+</div>
+<div class="column">
+    <div class="card" id="b8">
+        <img src="c6.jpg" style="width:100%">
+        <h2>Coffee Cake</h2>
+        <h3>For the lovers of coffee and Cake! Originated in Germany, coffee cakes are refreshing and delicious.</h3>
+      </div>
+    </div>
+</div>
+    <div class="row">
+    <div class="column">
+    <div class="card" id="b9">
+      <img src="c7.jpg" style="width:100%">
+      <h2>CupCake</h2>
+      <h3>A cup-sized version of cakes, cupcakes are too good for small and sweet hunger calls.</h3>
+    </div>
+    </div>
+    <div class="column">
+    <div class="card" id="b10">
+        <img src="c8.jpg" style="width:100%">
+        <h2>Plum Cake</h2>
+        <h3>Plum cakes are usually made using dried fruits and are not frosted with cream or fondant.</h3>
+    </div>
+    </div>
+    <div class="column">
+        <div class="card" id="b11">
+            <img src="c9.jpg" style="width:100%">
+            <h2>Ice Cream Cake</h2>
+            <h3>Layering cake bread with ice creams instead of whipped cream and topped with ice cream too!</h3>
+          </div>
+ </div>
+    </div>
+</div>
+<center><a href="home.html"><button>Back to home</button></a></center>
+<script>
+  $( "button" ).button();
+  $( "#progressbar" ).progressbar({
+  value: false
+});
+$("#b3").click(function() { 
+ $( "#b3" ).effect({ 
+ effect: "clip", 
+ duration: 1800 ,
+direction:"horizontal" 
+ }); 
+ }); 
+ $("#b4").click(function() { 
+ $( "#b4" ).effect({ 
+ effect: "drop", 
+ }); 
+ });
+ $("#b5").click(function() { 
+ $( "#b5" ).effect({ 
+ effect: "fold", 
+ duration: 4000,
+ horizFirst: true
+ }); });
+ $("#b6").click(function() { 
+ $( "#b6" ).effect({ 
+ effect: "fade",
+ duration: 1800 , 
+ }); 
+ });
+ $("#b7").click(function() { 
+ $( "#b7" ).effect({ 
+ effect: "explode", 
+ pieces: 20, 
+ duration: 1800 
+ }); });
+ $("#b8").click(function() { 
+ $( "#b8" ).effect({ 
+ effect: "puff", 
+ duration: 4000,
+ percent: 150
+ }); 
+ });
+ $("#b9").click(function() { 
+ $( "#b9" ).effect({ 
+ effect: "pulsate",
+ times: 5,
+ duration: 6000 
+ }); });
+ $("#b10").click(function() { 
+ $( "#b10" ).effect({ 
+ effect:"shake", 
+ times: 5, 
+ distance: 30,
+ duration:1000
+ }) })
+$("#b11").click(function() { 
+ $( "#b11" ).effect({ 
+ effect: "slide", 
+ duration: 1500 
+ });})
+  </script>
+</body>
+</html>
+

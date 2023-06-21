@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-darkness/jquery-ui.css" rel="stylesheet">  
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<style>
+    body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h3{
+position: absolute;
+  top: 0;
+  background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+#navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+#navbar a:hover {
+  background-color: #e7689d;
+  color: black;
+}
+#navbar a.active {
+  background-color: #aa0449;
+  color: white;
+}
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+img{
+  float: left;
+  width: 600px;
+  height: 500px;
+  margin-right:15px;
+}
+p{
+  font-size: 20px;
+  color: rgb(206, 37, 18);
+}
+h2{
+color:green;
+}
+button {
+  display: inline-block;
+  font-size: 20px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid;
+  font-weight: 500;
+  padding: 10px 20px;
+  outline: 0;
+  cursor: pointer;
+  color: blue;
+  transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -webkit-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -moz-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -ms-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -o-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+button:hover {
+  background-color: #f85508;
+  border-color: #f85508;
+  color: #fff;
+}
+</style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+        <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+        <a href="branches.html"><i class="fa fa-map-marker"></i> Branches</a>
+       <a href="order.html"><i class="fa fa-cart-arrow-down"></i> Order</a>
+        <a href="cake.html"><i class="fa fa-birthday-cake"></i>  Cakes</a>
+        <a href="about.html"><i class="fa fa-fw fa-user"></i> About Us</a> 
+        <a class="active" href="#"><i class="fa fa-home"></i> Home</a> 
+    </div>
+    <div class="content">
+      <p><img id="opener" src="h3.jpg"><br><br>=>Satisfy all of your web cravings with SweetTooth!</p>
+      <div id="dialog">Welcome!!</div>
+      <p id="b1"> =>If you are looking for a delicious website for your cake shop, sweets shop, and even chocolate or ice cream shop, you've come to the right place!</p>
+      <p> =>For anyone into cake, chocolate, candy, cookies, confectionery, or patisserie business, this is just for you.</p>
+      <p id="b4">=>It comes packed with lovely homepages that can be easily adapted as per your taste and also with just the right elements that will fit your needs.</p>
+      <p> =>For all chocolateries, sweet pastry, cookies and dessert-related websites, SweetTooth is definitely the best choice.</p>
+      <p>=>Get SweetTooth and create an astounding event in no time!</p>
+      <center><button>Let visit!</button></center>
+    </div>
+    <script>
+
+      $( "#dialog" ).dialog({ autoOpen: false });
+      $( "#opener" ).dblclick(function() {
+        $( "#dialog" ).dialog( "open" );
+      });
+      $("#opener").click(function() { 
+ $( "#opener" ).effect({
+ effect:"bounce", 
+ times: 5, 
+ distance: 300 
+ }, 2000, function() { 
+ $( "body" ).css( "background", "black" ); 
+ }); });
+ $("#b1").click(function() { 
+ $( "#b1" ).effect({ 
+ effect: "blind", 
+ direction: "left",
+ duration: 0
+ }); 
+ });
+ $("#b4").hover(function() { 
+ $( "#b4" ).effect({ 
+ effect: "highlight", 
+ color:"green",
+ duration: 3000 
+ }); 
+ }); 
+</script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+$.get("info.php",function(data,status,xhr){
+alert("status:"+status+"\n"+"xhrstatus:"+xhr.statusText);
+$(".content").html(data);
+});
+});
+});</script>
+</body>
+</html>
